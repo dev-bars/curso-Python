@@ -3,7 +3,8 @@ import math as mt
 
 #Problemas medidas
 TITULO = "Cálculo de área de um quadrado, triangulo e trapezio"
-st.title(TITULO)
+st.markdown(f"<h1 style='text-align: center;'>{TITULO}</h1>", unsafe_allow_html=True)
+
 # Entrada de dados
 medidaA = st.number_input("Inserir a medida A: ")
 medidaB = st.number_input("Inserir a medida B: ")
