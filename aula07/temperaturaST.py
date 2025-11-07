@@ -32,7 +32,7 @@ temp = st.number_input("Valor da temperatura",format="%.2f",step=1.0)
 #         st.sidebar.error("Por favor, selecione apenas uma unidade de tem")
 
 #Processamento de dados
-if st.button("Converter",icon="🌡️"):
+if st.button("Converter",icon="🌡️"): #Se eu apertar o botão, ocorre o abaixo:
              if opcao_selecionada in "Celsius":
                      st.write(f"{temp}°C em Fahrenheit: {Celsius_Fahrenheit(temp):.2f}°F")
                      st.write(f"{temp}°C em Kelvin: {Celsius_Kelvin(temp):.2f}K")
