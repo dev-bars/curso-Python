@@ -17,4 +17,20 @@ print(tupla)
 print(type(tupla))
 print(tupla[3])
 print(tupla)
-print(tupla)
+
+#DICIONÁRIOS EM PYTHON
+#Dicionario tem um valor chave e seu valor
+dicionario = {"nome": "Senai", "logica:": False, "num": 20}
+print(dicionario)
+print(dicionario["logica:"])
+dicionario.update({"novo": "Senai"})
+del dicionario["logica:"]
+for chave in dicionario.keys(chave, "=>", dicionario{chave})
+
+#CONJUNTO EM PYTHON
+#Conjunto é uma coleção desordenada, (na vdd demonstra por ocupação de memória do CPU)
+conjunto = {"Senai", False, 10, 3.69}
+print(conjunto)
+conjunto.add(23)
+conjunto.discard("Senai") #Exclui a informação
+conjunto.clear() #Apaga tudo dentro do conjunto
