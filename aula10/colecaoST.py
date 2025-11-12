@@ -1,0 +1,20 @@
+#LISTA EM PYTHON
+#Lista aceita todos os tipos (string, booleano, inteiro, float) e pode mudar
+lista = ["senai", True, 22, 3.5] 
+print(lista) #Demonstra todos itens(indicies) da lista}
+print(type(lista)) #Demonstra o tipo de classe
+print(lista[2])#Demonstra o indicie mencionado
+print(len(lista)) #Demonstra a quantidade da lista
+lista.insert(1, "Campeao") #Insere no indicie a informação
+lista.append("ultimo") #Insere informação no ultimo indicie
+del lista[3] #Exclui a informação do indicie
+print(lista)
+
+#TUPLA EM PYTHON
+#Tupla é uma coleção de dados constantes: que não muda, não altera
+tupla = ("senai", True, 22, 3.5)
+print(tupla)
+print(type(tupla))
+print(tupla[3])
+print(tupla)
+print(tupla)
