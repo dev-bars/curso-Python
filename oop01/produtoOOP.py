@@ -3,6 +3,7 @@ class Produto:
     nome:str 
     preco:float 
     saldo:int 
+
     #Metodos
     def valorTotalEmEstoque(self) -> float:
         return self.preco * self.saldo 
@@ -11,4 +12,13 @@ class Produto:
         return self.saldo 
     def removerProdutos(self, quantidade) -> int:
         self.saldo = self.saldo - quantidade
+    def dadosDoProduto(self) -> str:
+        saida = f'''
+                Dados do produto:
+                \tNome do produto: {self.nome}
+                \tNome de compra do produto: R$ {self.preco}
+                \tQuantidade em estoque: {self.saldo}
+                \tValor total em estoque: R$ {self.valorTotalEmEstoque():.2f}
+                '''
+        return saida
 
