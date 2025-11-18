@@ -1,0 +1,7 @@
+@startuml pessoa
+class Pessoa {
+    + nome: str 
+    + idade: int 
+    + eh_mais_velha(): bool 
+    }
+    @enduml 
