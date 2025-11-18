@@ -10,7 +10,7 @@ class Pessoa:
 
     #Metodos
     def eh_mais_velha(self, outra_pessoa):
-        return self.idade > outra_pessoa.idade 
+        return self.idade > outra_pessoa
 
 
         
