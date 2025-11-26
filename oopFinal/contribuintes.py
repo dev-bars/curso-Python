@@ -97,10 +97,46 @@ possui 25 funcionários, o imposto fica:
 #FIM DAS CLASSES----------------------
 
 #PROGRAMA PRINCIPAL
-pessoaFisica1 = PessoaFisica("Ronaldo", 50000.00, 2000.00)
+#Esta primeira forma eu informei os dados manualmente.
+""" pessoaFisica1 = PessoaFisica("Ronaldo", 50000.00, 2000.00)
 print(pessoaFisica1.calcular_imposto_pessoa_fisica())
 
 pessoaJuridica1 = PessoaJuridica("Empresa SA", 400000.00, 25)
-print(pessoaJuridica1.calcular_imposto_pessoa_juridica())
+print(pessoaJuridica1.calcular_imposto_pessoa_juridica()) """
+
+#Desta segunda forma compreendi a estrutura do for i in range. Precisei da ajuda da IA para gerar o código.
+contribuintes = []
+
+N = int(input("Quantos contribuintes deseja cadastrar? "))
+
+for i in range(N):
+    print(f"\nContribuinte #{i+1}")
+    tipo = input("Pessoa Física (F) ou Jurídica (J)? ").strip().upper()
+
+    nome = input("Nome: ")
+    renda = float(input("Renda anual: "))
+
+    if tipo == "F":
+        gastos = float(input("Gastos com saúde: "))
+        contribuintes.append(PessoaFisica(nome, renda, gastos))
+
+    elif tipo == "J":
+        funcionarios = int(input("Número de funcionários: "))
+        contribuintes.append(PessoaJuridica(nome, renda, funcionarios))
+
+    else:
+        print("Tipo inválido! Pulando...")
+        continue
+
+print("\n=== IMPOSSOS PAGOS ===")
+for c in contribuintes:
+    if isinstance(c, PessoaFisica):
+        imposto = c.calcular_imposto_pessoa_fisica()
+    else:
+        imposto = c.calcular_imposto_pessoa_juridica()
+
+    print(f"{c.nome}: R$ {imposto:.2f}")
+
+
 
 
